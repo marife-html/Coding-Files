@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="login">
+        <label for="username">Username:</label>
+        <input type="text" id="user" placeholder="username"><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="pass" placeholder="Password"><br>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" required="Enter your email">
+
+        <button type="submit">Login</button>
+    </form>
+    <script>
+        $("#login").submit(function(e) {
+            e.preventDefault();
+            if ($("#user").val() === "" || $("#pass").val() === "") {
+                alert("Please fill in all fields");
+            } else {
+                alert("Login Successful!")
+            }
+        });
+    </script>
+</body>
+
+</html>
